@@ -1,0 +1,36 @@
+// this is a comment
+interactive func main (String arg1, int arg2) returns int
+{
+    lock String PRIORITY = 'WARNING'
+    global int t = 4
+    int a, b = 2,5
+    int c = (a+b)
+    String k = build String("hello")
+    character t = Empty 
+    t = 'b'
+    k.toList()
+    k.typeCast(to=int) //Raises error - certain characters within k are not integers
+    k.typeCast(to=ascii) // Works by converting characters to ascii values and adding them up
+    t.typeCast(to=ascii) // converts straight to ascii
+    k.show() // display
+    show(k,t) 
+    log(k, priority='WARNING')
+    output = doSomething(2) -> doSomething2 -> doSomething3
+    return SUCCESS
+
+}
+
+func doSomething(int a) return int
+{
+    return 3
+}
+
+func doSomething2(int a) return int
+{
+    return 1
+}
+
+func doSomething3(int a) return int
+{
+    return 2
+}

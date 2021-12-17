@@ -1,3 +1,5 @@
+from ez.lib import state
+
 // this is a comment
 interactive func main (String arg1, int arg2) returns int
 {
@@ -6,7 +8,15 @@ interactive func main (String arg1, int arg2) returns int
     int a, b = 2,5
     int c = (a+b)
     String k = build String("hello")
-    character t = Empty 
+    character t = build Empty() 
+    int c = 0
+    Integer d = build Integer(Empty)
+    Integer e = build Integer(Empty)
+
+    // in interactive mode should show that you are allocating more memory and can now have more functions you can use on c
+    c.explain()
+    state.describe()
+    // explains the type and functions associated with it 
     t = 'b'
     k.toList()
     k.typeCast(to=int) //Raises error - certain characters within k are not integers
@@ -22,6 +32,18 @@ interactive func main (String arg1, int arg2) returns int
 
 func doSomething(int a) return int
 {
+    List[int] lst = [1,2,3,4,5]
+    List[int] lst = build List([1,2,3,4,5])
+    lst.min() -> show()
+    lst.max().show()
+    lst.mean().show()
+    lst.std().show()
+    List[int] lst = apply(int x, x.show(), lst, returns=int)
+    // sets lst to [0] throught automatic type castings
+    apply(int x, x.show() if x == 2, lst, returns=None)
+    apply(int x, x-1, lst, mutate=false) -> show()  
+    // lostValueWarning: [0,1,2,3,4] was not stored or shown
+    apply(int x, x-1, lst, mutate=true) 
     return 3
 }
 

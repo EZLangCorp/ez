@@ -1,0 +1,4 @@
+chmod u+x cli_interpreter.cpp
+g++ -o cli_interpreter cli_interpreter.cpp
+chmod u+x cli_interpreter
+./cli_interpreter

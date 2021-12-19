@@ -1,16 +1,21 @@
 from ez.lib import state
 
 // this is a comment
+// intractive implies will have visualization of the process
+// will have a message written to user every time meomory is allocated
+// or deallocated
+
+
 interactive func main (String arg1, int arg2) returns int
 {
     lock String PRIORITY = 'WARNING'
     global int t = 4
     int a, b = 2,5
-    int c = (a+b)
+    int c = (a + b)
     String k = build String("hello")
     character t = build Empty() 
     int c = 0
-    Integer d = build Integer(Empty)
+    Integer d = build Integer(5)
     Integer e = build Integer(Empty)
 
     // in interactive mode should show that you are allocating more memory and can now have more functions you can use on c
